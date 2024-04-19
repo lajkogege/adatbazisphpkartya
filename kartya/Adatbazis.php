@@ -61,6 +61,11 @@ class Adatbazis {
         return $this->kapcsolat->query($sql);
     }
 
+    public function torles($tabla, $oszlop, $ertek){
+        $sql = " DELETE FROM $tabla WHERE $oszlop='$ertek'";
+        return $this->kapcsolat->query($sql);
+    }
+
 
     public function rekordokSzama($tabla){
         $sql = "SELECT * FROM $tabla";

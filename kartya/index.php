@@ -14,6 +14,7 @@
         $adatbazis = new Adatbazis();
         //lekérdezések:
         $adatbazis->modosit("szín", "nev", "zöld", "green");
+        $adatbazis->torles("szin","nev","zöld")
         $matrix = $adatbazis->adatLeker("kep", "szin");
         $adatbazis->megjelenit($matrix);
         if ($adatbazis->rekordokSzama("kartya") == 0) {
